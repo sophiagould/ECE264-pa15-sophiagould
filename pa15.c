@@ -51,14 +51,12 @@ int main(int argc, char **argv)
   	finPrint(file, thead);
    	fclose(file);
 
-   	TreeNode * tree;
-	tree = malloc(sizeof(TreeNode));
-   	tree = huffFunc(thead);
+	TreeNode * node = huffFunc(thead);
 	freeThead(thead);
 	
 	file = fopen(argv[3], "w");
 	char * root = malloc(sizeof(char) * 9);
-	huffPrint(0, tree, file, root);
+	huffPrint(0, node, file, root);
 	free(root);
 	fclose(file);
 
@@ -68,7 +66,7 @@ int main(int argc, char **argv)
 	*val = 7;
 	*num = 0;
 
-	headReader(val, tree, file, num);
+	headReader(val, node, file, num);
 	if(*val != 7){
 		while(*val >= 0){
 			*val -= 1;
@@ -77,7 +75,7 @@ int main(int argc, char **argv)
 	}
 	free(val);
 	free(num);
-	freeNodes(tree);
+	freeNodes(node);
 
 	fclose(file);
 	return EXIT_SUCCESS;
