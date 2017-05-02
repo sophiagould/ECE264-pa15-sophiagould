@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "huffman.h"
+#include "funcs.h"
 
 /* count the occurrences in a file */
 
@@ -44,4 +44,41 @@ int main(int argc, char **argv)
  
    // Your code should go here
 
+   	NodeHead * thead = create(asciiCount);
+   	free(asciiCount);
+
+   	FILE * file = fopen(argv[2], "w");
+  	finPrint(file, thead);
+   	fclose(file);
+
+   	TreeNode * tree;
+	tree = malloc(sizeof(TreeNode));
+   	tree = huffFunc(thead);
+	freeThead(thead);
+	
+	file = fopen(argv[3], "w");
+	char * root = malloc(sizeof(char) * 9);
+	huffPrint(0, tree, file, root);
+	free(root);
+	fclose(file);
+
+	file = fopen(argv[4], "w");
+	int * val = malloc(sizeof(int));
+	uint8_t * num = malloc(sizeof(uint8_t));
+	*val = 7;
+	*num = 0;
+
+	headReader(val, tree, file, num);
+	if(*val != 7){
+		while(*val >= 0){
+			*val -= 1;
+		}
+		fwrite(num, 1, 1, file);
+	}
+	free(val);
+	free(num);
+	freeNodes(tree);
+
+	fclose(file);
+	return EXIT_SUCCESS;
 }
