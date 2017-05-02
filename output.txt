@@ -1,0 +1,36 @@
+Commit ID tagged for submission: 4fea1321d70c0aca42bcaccaa28e20538bc674a3
+Submission graded at: 2017-05-02 14:34:11
+
+[*] Attempting to run make clean...
+[*] Verifying pa15 and *.o do not exist.
+[*] Passed!
+[*] Running make all...
+[*] Checking to see if an executable named 'pa15' exists.
+[*] Passed!
+[*] Running tests...
+[*] File01: 
+   Output 1: Passed,  Output 2: Passed,  ,Output 3: Failed
+[*] File02: 
+   Output 1: Passed,  Output 2: Passed,  ,Output 3: Failed
+[*] File03: 
+   Output 1: Passed,  Output 2: Passed,  ,Output 3: Failed
+[*] File04: 
+   Output 1: Passed,  Output 2: Passed,  ,Output 3: Failed
+[*] File05: 
+   Output 1: Passed,  Output 2: Passed,  ,Output 3: Failed
+[*] File06: 
+   Output 1: Passed,  Output 2: Passed,  ,Output 3: Failed
+[*] File07: 
+   Output 1: Passed,  Output 2: Passed,  ,Output 3: Failed
+[*] File08: 
+   Output 1: Passed,  Output 2: Passed,  ,Output 3: Failed
+[*] File09: 
+   Output 1: Passed,  Output 2: Passed,  ,Output 3: Failed
+[*] File10: 
+   Output 1: Passed,  Output 2: Passed,  ,Output 3: Failed
+[*] You passed 10/10 sorted files (20%)
+[*] You passed 10/10 huffman files (40%)
+[*] You passed 0/10 header files (40%)
+[*] Testing valgrind errors/memory leaks. (-50% for any error)
+[*] There are 0 byte(s) leaked.
+[*] There are 0 error(s) detected by valgrind.
